@@ -1,0 +1,73 @@
+[
+    {
+      "id": "1",
+      "image": "../assets/images/carousel/image1.jpg",
+      "category": ["공연장", "다목적홀"],
+      "title": "모든 날 모든 순간",
+      "location": "서초동",
+      "rating": 4.8,
+      "reviewCount": 122,
+      "price": 70000,
+      "facilities": ["주차장", "무대 조명", "음향 시설", "의자 제공"],
+      "host": "서울 공연협회",
+      "hostInfo": "서울 공연협회는 2000년 설립된 공연장 운영 전문 업체입니다.",
+      "details": "이 공연장은 최대 300명의 관객을 수용할 수 있으며, 최신 음향 및 조명 시스템을 갖추고 있습니다. 다양한 행사와 공연에 적합합니다."
+    },
+    {
+      "id": "2",
+      "image": "../assets/images/carousel/image2.jpg",
+      "category": ["회의실", "세미나룸"],
+      "title": "현대 세미나실",
+      "location": "강남구",
+      "rating": 4.5,
+      "reviewCount": 98,
+      "price": 50000,
+      "facilities": ["Wi-Fi", "프로젝터", "화이트보드", "냉난방 시설"],
+      "host": "강남 비즈니스 센터",
+      "hostInfo": "강남 비즈니스 센터는 현대적이고 깔끔한 세미나 공간을 제공합니다.",
+      "details": "현대 세미나실은 강남 중심에 위치하여 접근성이 좋고, 20-50명 규모의 회의와 워크숍에 적합한 공간입니다."
+    },
+    {
+      "id": "3",
+      "image": "../assets/images/carousel/image3.jpg",
+      "category": ["촬영 스튜디오", "포토 스튜디오"],
+      "title": "마포 포토 스튜디오",
+      "location": "마포구",
+      "rating": 4.9,
+      "reviewCount": 85,
+      "price": 120000,
+      "facilities": ["조명 장비", "촬영 소품", "대형 스크린", "주차 공간"],
+      "host": "마포 스튜디오 협회",
+      "hostInfo": "마포 스튜디오 협회는 전문 사진작가를 위한 최적의 촬영 공간을 제공합니다.",
+      "details": "마포 포토 스튜디오는 최신 장비와 소품을 갖추고 있으며, 개인 및 상업 촬영에 적합한 장소입니다."
+    },
+    {
+      "id": "4",
+      "image": "../assets/images/carousel/image4.jpg",
+      "category": ["전시장", "아트 갤러리"],
+      "title": "인사동 아트 갤러리",
+      "location": "종로구",
+      "rating": 4.7,
+      "reviewCount": 76,
+      "price": 80000,
+      "facilities": ["작품 전시대", "조명 시스템", "보안 시스템", "냉난방 시설"],
+      "host": "인사동 문화 협회",
+      "hostInfo": "인사동 문화 협회는 예술과 문화를 홍보하는 전시 공간을 운영합니다.",
+      "details": "인사동 아트 갤러리는 종로구 중심에 위치하며, 소규모 전시 및 예술 이벤트를 위한 공간입니다."
+    },
+    {
+      "id": "5",
+      "image": "../assets/images/carousel/image5.jpg",
+      "category": ["공연장", "야외 무대"],
+      "title": "한강 야외 공연장",
+      "location": "영등포구",
+      "rating": 4.6,
+      "reviewCount": 150,
+      "price": 100000,
+      "facilities": ["야외 무대", "음향 시스템", "전기 시설", "화장실"],
+      "host": "한강 공연 협회",
+      "hostInfo": "한강 공연 협회는 자연과 함께하는 야외 공연장을 제공합니다.",
+      "details": "한강 야외 공연장은 최대 500명까지 수용 가능하며, 자연 속에서 다양한 행사를 개최할 수 있는 공간입니다."
+    }
+  ]
+  

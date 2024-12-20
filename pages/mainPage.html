@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인페이지</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <a href="mainPage.html">로고</a>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="mainPage.html">홈</a></li>
+        <li><a href="categoryPage.html">카테고리</a></li>
+        <li><a href="infoPage.html">회사정보</a></li>
+        <li><a href="myPage.html">마이페이지</a></li>
+        <li><a href="registPage.html">공연등록</a></li>
+        <li><a href="promoPage.html">홍보센터</a></li>
+      </ul>
+    </nav>
+    <div class="login">
+      <a href="#">로그인</a>
+    </div>
+  </header>
+
+  <!-- floating-button -->
+    <div class="floating-button">
+        <img src="../assets/images/floating_button.svg" alt="플로팅 버튼">
+    </div>
+
+  <!-- Section1 -->
+  <section class="section1-1">
+    <div class="banner">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="../assets/images/carousel/image1.jpg" alt="Image 1">
+          <img src="../assets/images/carousel/image2.jpg" alt="Image 2">
+          <img src="../assets/images/carousel/image3.jpg" alt="Image 3">
+          <img src="../assets/images/carousel/image4.jpg" alt="Image 4">
+          <img src="../assets/images/carousel/image5.jpg" alt="Image 5">
+        </div>
+        <div class="carousel-indicator">
+          <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section1-2">
+    <div class="search-container">
+      <div class="search-bar">
+        <div class="search-option">
+          <span>지역</span>
+          <div class="input">
+            <img src="../assets/images/locate.svg" alt="위치 아이콘">
+          </div>
+        </div>
+        <div class="search-option">
+          <span>날짜</span>
+          <div class="input">
+            <img src="../assets/images/date.svg" alt="날짜 아이콘">
+          </div>
+        </div>
+        <div class="search-option">
+          <span>예산</span>
+          <div class="input">
+            <img src="../assets/images/money.svg" alt="예산 아이콘">
+          </div>
+        </div>
+        <div class="search-option">
+          <span>객석수</span>
+          <div class="input">
+            <img src="../assets/images/seat.svg" alt="객석수 아이콘">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="search-btn">
+        <img src="../assets/images/search.svg" alt="돋보기 아이콘">
+    </button>
+  </section>
+  
+  <section class="section1-3">
+    <div class="category-icons">
+      <div class="category">
+        <div class="icon-placeholder"></div>
+        <p>연극</p>
+      </div>
+      <div class="category">
+        <div class="icon-placeholder"></div>
+        <p>뮤지컬</p>
+      </div>
+      <div class="category">
+        <div class="icon-placeholder"></div>
+        <p>무용</p>
+      </div>
+      <div class="category">
+        <div class="icon-placeholder"></div>
+        <p>라이브</p>
+      </div>
+      <div class="category">
+        <div class="icon-placeholder"></div>
+        <p>클래식 공연</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section2 -->
+  <section class="section2">
+    <div class="content-grid" id="card-container">
+      <!-- JavaScript에서 동적으로 카드가 생성됩니다 -->
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-links">
+
+      <div class="footer-column">
+        <h3>컬링</h3>
+        <ul>
+          <li><a href="#">컬링 소개</a></li>
+          <li><a href="#">인스타그램</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>서비스 정책</h3>
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">환불규정</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>고객지원</h3>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-info">
+      <p>통신판매업 신고번호: 2023-경북포항-1323</p>
+      <p>상호: (주)알터즈 | 대표자명: 김광현 | 사업자등록번호: 707-24-01862</p>
+      <p>주소: 경상북도 포항시 북구 한동로 558 창업보육센터(2)</p>
+      <p>고객센터: artause23@gmail.com</p>
+    </div>
+
+  </footer>  
+
+  <script src="../assets/js/main.js" defer></script>
+
+</body>
+</html>
