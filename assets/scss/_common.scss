@@ -56,7 +56,8 @@
   
   /* 검색 섹션 */
   .search-section {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0 80px;
   
     .search-bar {
@@ -69,12 +70,12 @@
         align-items: center;
         background-color: #f3f3f3;
         border-radius: 8px;
-        padding: 10px 15px;
+        padding: 9px 15px;
         flex: 1;
   
         img {
-          width: 20px;
-          height: 20px;
+          width: 17px;
+          height: 17px;
           margin-right: 10px;
         }
   
