@@ -1,15 +1,16 @@
-//헤더
+/* 헤더 */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    //border-bottom: 1px solid #ddd;
   
     .logo {
       font-size: 20px;
       font-weight: bold;
+  
       a {
         text-decoration: none;
         color: #333;
@@ -25,11 +26,13 @@
   
         li {
           margin-right: 40px;
+  
           a {
-            font-weight:500;
+            font-weight: 500;
             text-decoration: none;
             color: #000;
             font-size: 16px;
+  
             &:hover {
               color: #EF283D;
             }
@@ -43,12 +46,54 @@
         text-decoration: none;
         color: #333;
         font-size: 16px;
+  
         &:hover {
           color: #EF283D;
         }
       }
     }
   }
+  
+  /* 검색 섹션 */
+  .search-section {
+    margin-top: 20px;
+    padding: 0 80px;
+  
+    .search-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+  
+      .search-option {
+        display: flex;
+        align-items: center;
+        background-color: #f3f3f3;
+        border-radius: 8px;
+        padding: 10px 15px;
+        flex: 1;
+  
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+  
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          flex: 1;
+          font-size: 14px;
+          color: #333;
+  
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+  
   
 //푸터
 .footer {
