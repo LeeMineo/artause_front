@@ -28,12 +28,176 @@
   </header>
   
   <!-- section1 -->
-
+  <div class="section1">
+    <div class="section1-container">
+      <div class="tab active" id="tab-reserving">예약중</div>
+      <div class="tab" id="tab-completed">예약완료</div>
+      <div class="tab" id="tab-cancelled">취소/환불</div>
+    </div>
+  </div>
+  
   <!-- section2 -->
+  <div class="section2">
+    <div class="section2-container">
+
+      <div class="section2-left">
+
+        <img src="/Users/jiyun/Desktop/artause_front/assets/images/carousel/image5.jpg" alt="Image 5">
+  
+        <div class="section2-left-name">
+          <a class="name">모든 날 모든 순간</a>
+          <a class="category">공연장</a>
+          <a class="category">다목적홀</a>
+        </div>
+
+        <p class="detail">상세정보 상세정보 상세정보</p>
+  
+        <div class="section2-left-equip">
+          <a class="equip">조명</a>
+          <a class="equip">조명</a>
+          <a class="equip">조명</a>
+          <a class="equip">조명</a>
+          <a class="equip">조명</a>
+          <a class="equip">조명</a>
+        </div>
+      </div>
+  
+      <div class="section2-right" id="section2-right">
+        <p>예약 날짜 <span id="display-date"></span></p>
+        <p>예약 시간 <span id="display-time"></span></p>
+        <p>예약 인원 <span id="display-people"></span></p>
+        <hr />
+        <p class="price">70,000 원</p>
+        <button id="payButton">대관 신청 완료</button>
+      </div>
+      
+    </div>
+
+  </div>
+
 
   <!-- section3 -->
+  <div class="section3">
+    <div class="section3-container">
+      <div class="section3-left"> 
+        <h3>예약정보</h3>
+        <div class="input-group">
+          <label for="reserve-date">예약 날짜</label>
+          <input type="text" id="reserve-date" placeholder="예: 2024.04.01 - 2024.04.02" />
+        </div>
+        <div class="input-group">
+          <label for="reserve-time">예약 시간</label>
+          <input type="text" id="reserve-time" placeholder="예: 17시 30분 - 21시 30분" />
+        </div>
+        <div class="input-group">
+          <label for="reserve-people">예약 인원</label>
+          <input type="text" id="reserve-people" placeholder="예: 1명" />
+        </div>
+        <p class="section4-left-line"></p>
+    
+        <h3>예약자 정보</h3>
+        <div class="input-group">
+          <label for="reserver-name">예약자</label>
+          <input type="text" id="reserver-name" placeholder="예: 홍길동" />
+        </div>
+        <div class="input-group">
+          <label for="contact">연락처</label>
+          <input type="text" id="contact" placeholder="예: 010-1234-5678" />
+        </div>
+        <div class="input-group">
+          <label for="email">이메일</label>
+          <input type="text" id="email" placeholder="예: example@email.com" />
+        </div>
+        <div class="input-group">
+          <label for="purpose">프로젝트</label>
+          <select id="purpose">
+            <option value="meeting">회의</option>
+            <option value="event">이벤트</option>
+            <option value="presentation">발표</option>
+            <option value="workshop">워크숍</option>
+            <option value="others">기타</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="requests">요청사항</label>
+          <textarea id="requests" placeholder="예: 추가 요청사항 입력"></textarea>
+        </div>
 
-  <!-- section4 -->
+        <p class="section4-left-line"></p>
+
+      </div>
+
+
+      <div class="section3-right"> </div>
+ 
+    </div>
+  </div>
+  
+
+
+
+<!-- Section 4 -->
+<div class="section4">
+  <div class="section4-container">
+    <div class="section4-left">
+      <h3>호스트 정보</h3>
+      <div class="host-profile">
+        <div class="host-image">
+          <img src="/Users/jiyun/Desktop/artause_front/assets/images/carousel/image5.jpg" alt="호스트 이미지">
+        </div>
+        <div class="host-details">
+          <p><strong>호스트:허지연</strong> </p>
+          <p>호스트 정보 호스트 정보</p>
+        </div>
+      </div>
+
+      <div class="section4-left-detail">
+        <ul>
+          <li>
+            <span class="label">공간 상호</span>
+            <span class="value">아아아</span>
+          </li>
+          <li>
+            <span class="label">대표자명</span>
+            <span class="value">아아아</span>
+          </li>
+          <li>
+            <span class="label">소재지</span>
+            <span class="value">아아아</span>
+          </li>
+          <li>
+            <span class="label">사업자번호</span>
+            <span class="value">아아아</span>
+          </li>
+          <li>
+            <span class="label">연락처</span>
+            <span class="value">아아아</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="section4-left-line"></p>
+
+      <h3>예약시 주의사항</h3>
+
+      <ol class="custom-circle-list">
+        <li>주의사항 1</li>
+        <li>주의사항 2</li>
+        <li>주의사항 3</li>
+        <li>주의사항 4</li>
+        <li>주의사항 5</li>
+        <li>주의사항 6</li>
+      </ol>
+
+
+
+      <p class="section4-left-line"></p>
+
+    </div>
+    <div class="section4-right"></div>
+  </div>
+</div>
+
 
 
   <!-- footer -->
