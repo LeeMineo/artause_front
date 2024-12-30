@@ -147,3 +147,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // 날짜 변경 이벤트를 추가하고 싶다면 아래에 작성
     // 예: date picker를 클릭하여 변경할 수 있도록 연결
 });
+
+
+
+//모달
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loginBtn = document.getElementById("loginBtn");
+    const loginModal = document.getElementById("loginModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+  
+    // 모달 열기
+    loginBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginModal.style.display = "flex";
+    });
+  
+    // 모달 닫기
+    closeModalBtn.addEventListener("click", () => {
+      loginModal.style.display = "none";
+    });
+  
+    // 모달 바깥 클릭 시 닫기
+    window.addEventListener("click", (e) => {
+      if (e.target === loginModal) {
+        loginModal.style.display = "none";
+      }
+    });
+  });
+  

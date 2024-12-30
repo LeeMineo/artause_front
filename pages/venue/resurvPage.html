@@ -23,9 +23,38 @@
       </ul>
     </nav>
     <div class="login">
-      <a href="#">로그인</a>
+        <a href="#" id="loginBtn">로그인</a>
     </div>
   </header>
+
+  <!-- 모달 -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModalBtn">&times;</button>
+      <div class="modal-logo">
+        <img src="/assets/images/logo2.svg" alt="로고">
+      </div>
+      <div class="modal-title">
+        <img src="/assets/images/line.svg" class="line-svg" alt="line">
+        <span>간편 로그인/회원가입</span>
+        <img src="/assets/images/line.svg" class="line-svg" alt="line">
+      </div>
+      <button class="kakao-login">카카오로 간편 로그인</button>
+      <button class="google-login">구글로 간편 로그인</button>
+      <button class="email-register">이메일로 회원가입</button>
+      <div class="modal-title">
+        <img src="/assets/images/line.svg" class="line-svg" alt="line">
+        <span>이메일 로그인</span>
+        <img src="/assets/images/line.svg" class="line-svg" alt="line">
+      </div>
+      <form class="email-login-form">
+        <input type="email" placeholder="이메일">
+        <input type="password" placeholder="비밀번호">
+        <div class="forgot-password">아이디/비밀번호 찾기</div>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+    </div>
+  </div>
   
   <!-- section1 -->
   <!-- <div class="section1">
