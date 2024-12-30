@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>마이페이지</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- <link rel="stylesheet" href="../assets/css/myPage.css"> -->
+
 </head>
 <body>
   <!-- Header Section -->
@@ -27,15 +29,417 @@
     </div>
   </header>
   
-  <!-- comming soon -->
-  <!-- <div class="coming-soon-container">
-    <div class="coming-soon-content">
-      <h1>페이지 준비 중입니다</h1>
-      <p>현재 해당 페이지는 제작 중입니다. 빠른 시일 내에 완성될 예정입니다.</p>
-      <button onclick="location.href='mainPage.html'">홈으로 이동</button>
+  
+  <div class="tabs">
+    <div class="tabs-container">
+      <button class="tab-link" onclick="openTab(event, '예약내역')">예약내역</button>
+      <button class="tab-link" onclick="openTab(event, '회원정보')">회원정보</button>
+      <button class="tab-link" onclick="openTab(event, '프로젝트등록')">프로젝트 등록</button>
     </div>
-  </div> -->
+  </div>
+  
 
+  <!-- 이건 그냥 예약 페이지 복붙해놓은 거에요... -->
+  <div id="예약내역" class="tab-content">
+      <!-- section2 -->
+    <div class="section2">
+      <div class="section2-container">
+
+        <div class="section2-left">
+
+          <img src="/Users/jiyun/Desktop/artause_front/assets/images/carousel/image5.jpg" alt="Image 5">
+    
+          <div class="section2-left-name">
+            <a class="name">모든 날 모든 순간</a>
+            <a class="category">공연장</a>
+            <a class="category">다목적홀</a>
+          </div>
+
+          <p class="detail">상세정보 상세정보 상세정보</p>
+    
+          <div class="section2-left-equip">
+            <a class="equip">조명</a>
+            <a class="equip">조명</a>
+            <a class="equip">조명</a>
+            <a class="equip">조명</a>
+            <a class="equip">조명</a>
+            <a class="equip">조명</a>
+          </div>
+        </div>
+    
+        <div class="section2-right" id="section2-right">
+          <p>예약 날짜 <span id="display-date"></span></p>
+          <p>예약 시간 <span id="display-time"></span></p>
+          <p>예약 인원 <span id="display-people"></span></p>
+          <hr />
+          <p class="price">70,000 원</p>
+          <button id="payButton">대관 신청 완료</button>
+        </div>
+        
+      </div>
+
+    </div>
+
+
+    <!-- section3 -->
+    <div class="section3">
+      <div class="section3-container">
+        <div class="section3-left"> 
+          <h3>예약정보</h3>
+          <div class="input-group">
+            <label for="reserve-date">예약 날짜</label>
+            <input type="text" id="reserve-date" placeholder="예: 2024.04.01 - 2024.04.02" />
+          </div>
+          <div class="input-group">
+            <label for="reserve-time">예약 시간</label>
+            <input type="text" id="reserve-time" placeholder="예: 17시 30분 - 21시 30분" />
+          </div>
+          <div class="input-group">
+            <label for="reserve-people">예약 인원</label>
+            <input type="text" id="reserve-people" placeholder="예: 1명" />
+          </div>
+          <p class="section4-left-line"></p>
+      
+          <h3>예약자 정보</h3>
+          <div class="input-group">
+            <label for="reserver-name">예약자</label>
+            <input type="text" id="reserver-name" placeholder="예: 홍길동" />
+          </div>
+          <div class="input-group">
+            <label for="contact">연락처</label>
+            <input type="text" id="contact" placeholder="예: 010-1234-5678" />
+          </div>
+          <div class="input-group">
+            <label for="email">이메일</label>
+            <input type="text" id="email" placeholder="예: example@email.com" />
+          </div>
+          <div class="input-group">
+            <label for="purpose">프로젝트</label>
+            <select id="purpose">
+              <option value="meeting">회의</option>
+              <option value="event">이벤트</option>
+              <option value="presentation">발표</option>
+              <option value="workshop">워크숍</option>
+              <option value="others">기타</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="requests">요청사항</label>
+            <textarea id="requests" placeholder="예: 추가 요청사항 입력"></textarea>
+          </div>
+
+          <p class="section4-left-line"></p>
+
+        </div>
+
+
+        <div class="section3-right"> </div>
+  
+      </div>
+    </div>
+    
+
+
+
+  <!-- Section 4 -->
+  <div class="section4">
+    <div class="section4-container">
+      <div class="section4-left">
+        <h3>호스트 정보</h3>
+        <div class="host-profile">
+          <div class="host-image">
+            <img src="/Users/jiyun/Desktop/artause_front/assets/images/carousel/image5.jpg" alt="호스트 이미지">
+          </div>
+          <div class="host-details">
+            <p><strong>호스트:허지연</strong> </p>
+            <p>호스트 정보 호스트 정보</p>
+          </div>
+        </div>
+
+        <div class="section4-left-detail">
+          <ul>
+            <li>
+              <span class="label">공간 상호</span>
+              <span class="value">아아아</span>
+            </li>
+            <li>
+              <span class="label">대표자명</span>
+              <span class="value">아아아</span>
+            </li>
+            <li>
+              <span class="label">소재지</span>
+              <span class="value">아아아</span>
+            </li>
+            <li>
+              <span class="label">사업자번호</span>
+              <span class="value">아아아</span>
+            </li>
+            <li>
+              <span class="label">연락처</span>
+              <span class="value">아아아</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="section4-left-line"></p>
+
+        <h3>예약시 주의사항</h3>
+
+        <ol class="custom-circle-list">
+          <li>주의사항 1</li>
+          <li>주의사항 2</li>
+          <li>주의사항 3</li>
+          <li>주의사항 4</li>
+          <li>주의사항 5</li>
+          <li>주의사항 6</li>
+        </ol>
+
+
+
+        <p class="section4-left-line"></p>
+
+      </div>
+      <div class="section4-right"></div>
+    </div>
+  </div>
+
+
+
+  </div>
+  
+  <div id="회원정보" class="tab-content" style="display: block;">
+    <div class="profile-container">
+      <h2 class="profile-header">내 프로필</h2>
+      <div class="profile-row">
+        <div class="profile-label">이름</div>
+        <div class="profile-detail" id="detail-name">
+          허지연
+        </div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">프로필 이미지</div>
+        <div class="profile-detail">
+          <div class="profile-image">
+            <img src="/Users/jiyun/Desktop/artause_front/assets/images/carousel/image2.jpg" id="detail-img" alt="프로필 이미지">
+            <div class="camera-icon">📷</div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">이메일(로그인 ID)</div>
+        <div class="profile-detail" id="detail-email">dkjflskdj@hdjdfh.com</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">전화번호</div>
+        <div class="profile-detail" id="detail-phone">010-0000-0000</div>
+      </div>
+      <div class="profile-row">
+        <button class="service-terminate">서비스 탈퇴</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="프로젝트등록" class="tab-content" style="display:none;">
+  
+  <div class="form-container">
+    <form class="project-form">
+      
+      <!-- 극단 정보 -->
+      <div class="form-section">
+        <h3>극단 정보</h3>
+        <div class="form-group-horizontal">
+          <label for="projectName">프로젝트명을 입력해주세요.</label>
+          <input type="text" id="projectName" name="projectName" placeholder="예: 봄, 여름, 가을 그리고 겨울">
+        </div>
+        <div class="form-group-horizontal">
+          <label for="organizationName">주최 극단명을 입력해주세요.</label>
+          <input type="text" id="organizationName" name="organizationName" placeholder="예: 알터즈 극단">
+        </div>
+      </div>
+      
+      <!-- 대표자 정보 -->
+      <div class="form-section">
+        <h3>대표자 정보</h3>
+        <div class="form-group-horizontal">
+          <label for="representativeName">대표자명을 입력해주세요.</label>
+          <input type="text" id="representativeName" name="representativeName" placeholder="예: 알터즈">
+        </div>
+        <div class="form-group-horizontal">
+          <label for="phone">전화번호를 입력해주세요.</label>
+          <input type="tel" id="phone" name="phone" placeholder="예: 010-0000-0000">
+        </div>
+        <div class="form-group-horizontal">
+          <label for="email">메일 주소를 입력해주세요.</label>
+          <input type="email" id="email" name="email" placeholder="예: dkdkdk@dkdkdj.com">
+        </div>
+      </div>
+      
+      <!-- 공연 정보 -->
+      <div class="form-section">
+        <h3>공연 정보</h3>
+        <div class="form-concert">
+          <select id="venue" name="venue">
+            <option value="">공연장르를 선택해주세요.</option>
+            <option value="장르1">장르1</option>
+            <option value="장르2">장르2</option>
+            <option value="장르3">장르3</option>
+          </select>
+        </div>
+        <div class="form-concert">
+          <textarea id="description" name="description" rows="5" placeholder="기획의도 및 작품 줄거리를 입력해주세요"></textarea>
+          <span id="charCount">0/500</span>
+        </div>
+        <div class="form-concert">
+          
+          <div class="radio-group">
+            <label>예상 관객수를 선택해주세요.</label>
+            <label><input type="radio" name="audienceSize" value="50"> 50명</label>
+            <label><input type="radio" name="audienceSize" value="50-100"> 50명-100명</label>
+            <label><input type="radio" name="audienceSize" value="100-300"> 100명-300명</label>
+            <label><input type="radio" name="audienceSize" value="300+"> 300명 이상</label>
+          </div>
+        </div>
+        <div class="form-concert">
+          <label for="startDate">공연 일정 및 대관 요청 시간:</label>
+          <input id="dateRangePicker" type="text" placeholder="날짜를 선택하세요" readonly>
+        </div>
+
+        <div class="form-concert">
+          <textarea id="teamDescription" name="teamDescription" rows="5" placeholder="주요 크리에이티브 팀 소개(선택)"></textarea>
+          <span id="teamCharCount">0/500</span>
+        </div>
+      </div>
+
+      <!-- 장비 요청 사항 -->
+      <div class="form-section">
+        <h3>공간 및 장비 요청 사항</h3>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>무대 크기</label>
+            <label><input type="checkbox" name="stageSize" value="small"> 소형</label>
+            <label><input type="checkbox" name="stageSize" value="medium"> 중형</label>
+            <label><input type="checkbox" name="stageSize" value="large"> 대형</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>무대 형태</label>
+            <label><input type="checkbox" name="stageType" value="blackbox"> 블랙박스</label>
+            <label><input type="checkbox" name="stageType" value="proscenium"> 프로시니엄</label>
+            <label><input type="checkbox" name="stageType" value="round"> 원형</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>부대 시설</label>
+            <label><input type="checkbox" name="facility" value="waitingRoom"> 분장실</label>
+            <label><input type="checkbox" name="facility" value="storage"> 창고</label>
+            <label><input type="checkbox" name="facility" value="rehearsalRoom"> 리허설룸</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 첨부파일 및 추가 정보 -->
+      <div class="form-section">
+        <h3>첨부파일 및 추가 정보</h3>
+        <div class="file-upload">
+          <label for="planFile">공연 세부 계획서</label>
+          <span id="planFileName" class="file-name"></span>
+          <input type="file" id="planFile" name="planFile" />
+          <label for="planFile" class="upload-btn">파일 업로드</label>
+        </div>
+        <div class="file-upload">
+          <label for="posterFile">공연 포스터 및 프로그램 자료</label>
+          <span id="posterFileName" class="file-name"></span>
+          <input type="file" id="posterFile" name="posterFile" />
+          <label for="posterFile" class="upload-btn">파일 업로드</label>
+        </div>
+        <div class="file-upload">
+          <label for="businessLicense">사업자등록증 또는 대표자 신분증 사본 (선택)</label>
+          <span id="businessLicenseFileName" class="file-name"></span>
+          <input type="file" id="businessLicense" name="businessLicense" />
+          <label for="businessLicense" class="upload-btn">파일 업로드</label>
+        </div>
+        <div class="file-upload">
+          <textarea id="etc" name="etc" rows="5" placeholder="기타 요청사항(선택)"></textarea>
+          <span id="etcCharCount">0/500</span>
+        </div>
+      </div>
+
+
+       <!-- 장비 요청사항 -->
+      <div class="form-section">
+        <h3>장비 요청사항</h3>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>조명</label>
+            <label><input type="checkbox" name="light" value="basic"> 기본조명</label>
+            <label><input type="checkbox" name="light" value="moving"> 무빙 라이트</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>음향</label>
+            <label><input type="checkbox" name="sound" value="speaker"> 스피커</label>
+            <label><input type="checkbox" name="sound" value="mike"> 마이크</label>
+            <label><input type="checkbox" name="sound" value="mixer"> 믹서</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>영상</label>
+            <label><input type="checkbox" name="video" value="projector"> 프로젝터</label>
+            <label><input type="checkbox" name="video" value="LED"> LED 스크린</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>특수효과</label>
+            <label><input type="checkbox" name="special" value="smog"> 스모그</label>
+            <label><input type="checkbox" name="special" value="laser"> 레이저</label>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+       <!-- 마케팅 및 홍보 요청 -->
+       <div class="form-section">
+        <h3>마케팅 및 홍보 요청</h3>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>홍보 지원 서비스 요청 여부</label>
+            <label><input type="checkbox" name="promotion" value="cardNews"> 카드뉴스 제작</label>
+            <label><input type="checkbox" name="promotion" value="SNS"> SNS 광고 지원</label>
+          </div>
+        </div>
+        <div class="file-upload">
+          <label for="promotionFile">공연 포스터 및 홍보자료 업로드
+            <t>포스터 이미지, 예고 영상 등</t>
+          </label>
+          <span id="promotionFileName" class="file-name"></span>
+          <input type="file" id="promotionFile" name="promotionFile" />
+          <label for="promotionFile" class="upload-btn">파일 업로드</label>
+        </div>
+        
+      </div>
+
+
+      <!-- 등록 버튼 -->
+      <div class="form-section">
+        <div class="submit-btn-container">
+          <button type="submit" class="submit-btn">등록 신청 완료</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  </div>
+  
   <!-- footer -->
   <footer class="footer">
     <div class="footer-links">
@@ -76,7 +480,7 @@
 
   </footer>  
 
-  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/myPage.js" defer></script>
 
 </body>
 </html>
