@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     // CSS의 grid가 데이터 개수에 따라 자동으로 조정되도록 설정
 
 
-
     // Section 2-3: 호스트 정보 설정
     document.querySelector(".detail-host-info .host-name").innerHTML = `
       <h4>호스트:</h4>

@@ -46,7 +46,7 @@
 .section1-2 {
     position: absolute;
     display: flex;
-    top: 320px; // 섹션1-1에 반 정도 겹치게 설정
+    top: 330px; // 섹션1-1에 반 정도 겹치게 설정
     left: 50%;
     transform: translateX(-50%); // 가로 중앙 정렬
     z-index: 10;
@@ -131,26 +131,28 @@
     justify-content: center;
   
     .category-icons {
-      display: flex;
-      gap: 30px;
-  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+      }
+      
       .category {
         text-align: center;
-  
-        .icon-placeholder {
-          width: 70px;
-          height: 70px;
-          background-color: #f3f3f3;
-          border-radius: 25px;
-          margin: 10px auto;
-        }
-  
-        p {
-          font-size: 14px;
-          color: #333;
-        }
+        flex: 1;
       }
-    }
+      
+      .category .icon {
+        width: 70px; /* 아이콘 크기 조정 */
+        height: 70px;
+        margin-bottom: 10px; /* 아이콘과 텍스트 간격 */
+      }
+      
+      .category p {
+        font-size: 14px;
+        color: #333;
+      }
+      
   }
   
   

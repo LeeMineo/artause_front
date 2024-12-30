@@ -3,55 +3,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 15px 70px;
     background-color: #fff;
-  
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-  
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-    }
-  
-    .nav-menu {
-      ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-  
-        li {
-          margin-right: 40px;
-  
-          a {
-            font-weight: 500;
-            text-decoration: none;
-            color: #000;
-            font-size: 16px;
-  
-            &:hover {
-              color: #EF283D;
-            }
-          }
-        }
-      }
-    }
-  
-    .login {
-      a {
-        text-decoration: none;
-        color: #333;
-        font-size: 16px;
-  
-        &:hover {
-          color: #EF283D;
-        }
-      }
-    }
-  }
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* 로고 세로 정렬 */
+    margin-right: 80px; /* 네비게이션 메뉴와 간격 */
+}
+
+.logo img {
+    width: 90px; /* 원하는 너비 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 중간 정렬 문제 해결 */
+}
+
+.nav-menu {
+    flex: 1; /* 네비게이션 메뉴를 넓게 */
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-right: 30px; /* 아이템 간격 */
+}
+
+.nav-menu li:last-child {
+    margin-right: 0; /* 마지막 아이템 간격 제거 */
+}
+
+.nav-menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #EF283D; /* 호버 색상 */
+}
+
+.login {
+    text-align: right; /* 로그인 버튼 오른쪽 정렬 */
+}
+
+.login a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.login a:hover {
+    color: #EF283D; /* 호버 색상 */
+}
+
   
 /* 검색 섹션 */
 .search-section {
