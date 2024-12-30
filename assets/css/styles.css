@@ -436,34 +436,6 @@
   font-weight: normal;
 }
 
-/* Section 1 */
-.section1 {
-  width: 100%;
-  border-bottom: 1px solid #D9D9D9;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-.section1-container {
-  width: 90%;
-  margin: 0 auto; /* 가운데 정렬 */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.section1-container .tab {
-  padding: 10px 20px;
-  cursor: pointer;
-  color: #5E5E5E;
-  text-align: center;
-}
-
-.section1-container .tab.active {
-  color: #F04242;
-  border-bottom: 2px solid #F04242;
-}
-
 /* Section 2 */
 .section2 {
   width: 100%;
@@ -662,11 +634,11 @@
 /* 라벨 스타일 */
 .section3-container label {
   flex: 1.2;
-  width: 10%; /* 레이블 너비를 줄임 */
+  width: 10%;
   font-size: 0.85rem;
   color: #242526;
   text-align: left;
-  margin-right: 5px; /* 라벨과 입력 필드 간격 최소화 */
+  margin-right: 5px;
 }
 
 /* 입력 필드 스타일 */
@@ -682,13 +654,13 @@
 }
 
 .section3-container textarea {
-  height: 50px; /* 텍스트 에어리어 높이를 줄임 */
+  height: 50px;
   resize: none;
 }
 
 #purpose {
-  width: 90%; /* input과 동일한 너비 */
-  padding: 6px; /* 내부 여백 */
+  width: 90%;
+  padding: 6px;
   border: 1.7px solid #EDEDED;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -814,6 +786,376 @@
   align-items: flex-start; /* 왼쪽 정렬 */
   padding: 20px;
   width: 100%;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-container {
+  width: 90%;
+  margin: 0 auto; /* 가운데 정렬 */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tab-link {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.tab-link.active {
+  border-bottom: 2px solid #F04242;
+  color: #F04242;
+}
+
+.tab-content {
+  display: none;
+}
+
+.form-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border: none;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+}
+.project-form .form-section {
+  margin-bottom: 20px;
+  background-color: white;
+  /* 버튼 스타일 */
+}
+.project-form .form-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.project-form .form-section .form-group-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+.project-form .form-section .form-group-horizontal label {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.project-form .form-section .form-group-horizontal input {
+  flex: 7;
+  font-size: 12px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.project-form .form-section .form-group-horizontal input::placeholder {
+  color: #aaa;
+}
+.project-form .form-section .form-concert {
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.project-form .form-section .form-concert label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.project-form .form-section .form-concert select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+.project-form .form-section .form-concert textarea::placeholder {
+  font-weight: 400; /* 글자 두껍게 */
+  color: #000; /* 검정색 */
+}
+.project-form .form-section .form-concert textarea {
+  width: 100%;
+  height: 140px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  resize: none;
+  background-color: transparent;
+}
+.project-form .form-section .form-concert #charCount, .project-form .form-section .form-concert #teamCharCount {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: #aaa;
+}
+.project-form .form-section .form-concert .radio-group {
+  display: flex; /* 가로로 나란히 배치 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  gap: 10px; /* 버튼 간 간격 조정 */
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.project-form .form-section .form-concert .radio-group label {
+  padding-left: 0;
+  display: flex;
+  align-items: center; /* 라디오 버튼과 텍스트의 수직 정렬 */
+  font-size: 14px; /* 텍스트 크기 */
+  font-weight: 400;
+  cursor: pointer;
+  gap: 8px;
+}
+.project-form .form-section .form-concert .radio-group input[type=radio] {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  vertical-align: 100px; /* 텍스트와 수직 정렬 */
+  appearance: none;
+  border: 1px solid #636366;
+  border-radius: 50%;
+  outline: none;
+}
+.project-form .form-section .form-concert .radio-group input[type=radio]:checked {
+  background-color: #FF7070;
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px #FF7070;
+}
+.project-form .form-section .form-group {
+  margin-bottom: 15px;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.project-form .form-section .form-group .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project-form .form-section .form-group .checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+}
+.project-form .form-section .form-group .checkbox-group input[type=checkbox] {
+  appearance: none; /* 기본 체크박스 스타일 제거 */
+  width: 15px;
+  height: 15px;
+  border: 1px solid #9B9B9B; /* 기본 테두리 */
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+.project-form .form-section .form-group .checkbox-group input[type=checkbox]:checked {
+  background-color: #FF7070; /* 체크된 상태의 배경색 */
+  border: 2px solid #FF7070; /* 체크된 상태의 테두리 */
+}
+.project-form .form-section .form-group .checkbox-group input[type=checkbox]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+.project-form .form-section .file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+.project-form .form-section .file-upload textarea::placeholder {
+  font-weight: 400; /* 글자 두껍게 */
+  color: #000; /* 검정색 */
+  margin: 0;
+  padding: 0;
+}
+.project-form .form-section .file-upload textarea {
+  width: 100%;
+  height: 140px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  resize: none;
+  background-color: transparent;
+}
+.project-form .form-section .file-upload #etcCharCount {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: #aaa;
+}
+.project-form .form-section .file-upload t {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #727272;
+}
+.project-form .form-section .file-upload label {
+  flex: 2; /* 라벨이 왼쪽 정렬되도록 */
+  font-size: 14px;
+}
+.project-form .form-section .file-upload input[type=file] {
+  display: none; /* 숨김 처리 */
+}
+.project-form .form-section .file-upload .file-name {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.project-form .form-section .file-upload .upload-btn {
+  flex: 0.4;
+  padding: 5px 15px;
+  font-size: 14px;
+  background-color: #EDEDED;
+  border: 1px solid #EDEDED;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  color: #242526;
+}
+.project-form .form-section .submit-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; /* 부모 요소의 전체 너비 사용 */
+}
+.project-form .form-section .submit-btn {
+  width: 150px;
+  background-color: #FF7070;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.profile-container {
+  width: 90%;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.profile-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left; /* 좌측 정렬 */
+}
+
+.profile-row {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.profile-label {
+  width: 120px; /* 라벨 고정 너비 */
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.profile-detail {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+  padding-left: 70px;
+}
+
+.profile-image {
+  position: relative;
+  width: 40px; /* 이미지 크기 */
+  height: 40px; /* 이미지 크기 */
+  border-radius: 50%;
+  overflow: visible; /* 아이콘이 잘리지 않도록 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: -3px; /* 이미지 밖으로 살짝 위치 조정 */
+  right: -2px; /* 이미지 밖으로 살짝 위치 조정 */
+  width: 15px; /* 아이콘 크기 */
+  height: 15px; /* 아이콘 크기 */
+  background-color: #ff7070;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.service-terminate {
+  font-size: 14px;
+  color: #aaa;
+  text-align: left;
+  cursor: pointer;
+  margin-top: 30px;
+  border: none;
+  background-color: white;
 }
 
 html, body {
