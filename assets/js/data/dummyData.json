@@ -1,7 +1,11 @@
 [
     {
-      "id": "1",
-      "image": "/assets/images/carousel/image1.jpg",
+      "id": 1,
+      "images": [
+      "/assets/images/carousel/image1.jpg",
+      "/assets/images/carousel/image1.jpg",
+      "/assets/images/carousel/image1.jpg"
+      ],
       "category": ["공연장", "다목적홀"],
       "title": "모든 날 모든 순간",
       "location": "서초동",
@@ -15,8 +19,12 @@
       "detailPage": "/pages/venue/detailPage.html?id=1"
     },
     {
-      "id": "2",
-      "image": "/assets/images/carousel/image2.jpg",
+      "id": 2,
+      "images": [
+        "/assets/images/carousel/image2.jpg",
+        "/assets/images/carousel/image2.jpg",
+        "/assets/images/carousel/image2.jpg"
+        ],
       "category": ["회의실", "세미나룸"],
       "title": "현대 세미나실",
       "location": "강남구",
@@ -30,8 +38,12 @@
       "detailPage": "/pages/venue/detailPage.html?id=2"
     },
     {
-      "id": "3",
-      "image": "/assets/images/carousel/image3.jpg",
+      "id": 3,
+      "images": [
+        "/assets/images/carousel/image3.jpg",
+        "/assets/images/carousel/image3.jpg",
+        "/assets/images/carousel/image3.jpg"
+        ],
       "category": ["촬영 스튜디오", "포토 스튜디오"],
       "title": "마포 포토 스튜디오",
       "location": "마포구",
@@ -45,8 +57,12 @@
       "detailPage": "/pages/venue/detailPage.html?id=3"
     },
     {
-      "id": "4",
-      "image": "/assets/images/carousel/image4.jpg",
+      "id": 4,
+      "images": [
+        "/assets/images/carousel/image4.jpg",
+        "/assets/images/carousel/image4.jpg",
+        "/assets/images/carousel/image4.jpg"
+        ],
       "category": ["전시장", "아트 갤러리"],
       "title": "인사동 아트 갤러리",
       "location": "종로구",
@@ -60,8 +76,12 @@
       "detailPage": "/pages/venue/detailPage.html?id=4"
     },
     {
-      "id": "5",
-      "image": "/assets/images/carousel/image5.jpg",
+      "id": 5,
+      "images": [
+        "/assets/images/carousel/image5.jpg",
+        "/assets/images/carousel/image5.jpg",
+        "/assets/images/carousel/image5.jpg"
+        ],
       "category": ["공연장", "야외 무대"],
       "title": "한강 야외 공연장",
       "location": "영등포구",

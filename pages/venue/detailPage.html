@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header2 Section -->
   <header class="header">
     <div class="logo">
       <a href="mainPage.html">로고</a>
@@ -27,10 +27,121 @@
     </div>
   </header>
   
+  <div class="search-section">
+    <div class="search-bar">
+      <div class="search-option">
+        <img src="../../assets/images/locate.svg" alt="위치">
+        <input type="text" placeholder="위치">
+      </div>
+      <div class="search-option">
+        <img src="../../assets/images/date.svg" alt="날짜">
+        <input type="text" placeholder="날짜">
+      </div>
+      <div class="search-option">
+        <img src="../../assets/images/money.svg" alt="예산">
+        <input type="text" placeholder="예산">
+      </div>
+      <div class="search-option">
+        <img src="../../assets/images/seat.svg" alt="객석수">
+        <input type="text" placeholder="객석수">
+      </div>
+    </div>
+  </div>
+  
   <!-- section1 -->
-
-  <!-- section2 -->
-
+<!-- Section 1: Images -->
+<section class="detail-section1">
+    <div class="main-image-container">
+      <img id="main-image" src="" alt="Main Image">
+      <div class="image-counter" id="image-counter"></div>
+    </div>
+    <div class="thumbnails-container">
+      <div id="thumbnails" class="thumbnails-grid">
+        <!-- JavaScript로 썸네일이 동적으로 추가됩니다 -->
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- Section 2 -->
+<section class="detail-section2">
+    <div class="detail-content">
+      <!-- Section 2-1: 기본정보 -->
+      <div class="detail-basic-info">
+        <div class="location">
+          <img src="/assets/images/list_locate.svg" alt="Location Icon">
+          <span>${detailData.location}</span>
+        </div>
+        <div class="title">${detailData.title}</div>
+        <div class="rating">
+          <img src="/assets/images/list_star.svg" alt="Star Icon">
+          ${detailData.rating}
+          <span class="review-count">(${detailData.reviewCount})</span>
+        </div>
+        <div class="categories">
+          ${detailData.category.map((cat) => `<span class="tag">${cat}</span>`).join("")}
+        </div>
+      </div>
+  
+      <!-- Section 2-2: 시설 정보 -->
+      <div class="detail-facility-info">
+        <h4>시설정보</h4>
+        <div class="facilities-grid">
+          <!-- JavaScript에서 동적으로 시설 정보 추가 -->
+        </div>
+      </div>
+  
+      <!-- Section 2-3: 호스트 정보 -->
+      <div class="detail-host-info">
+        <div class="host">
+          <img src="/assets/images/host_default.svg" alt="Host Image">
+          <div class="host-details">
+            <div class="host-name">
+              <h4>호스트:</h4>
+              <span>${detailData.host}</span>
+            </div>
+            <div class="host-desc">${detailData.hostInfo}</div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Section 2-4: 상세 정보 -->
+      <div class="detail-detail-info">
+        <h4>상세정보</h4>
+        <p>${detailData.details}</p>
+      </div>
+    </div>
+  
+    <!-- <h3><span>${detailData.price}</span> 원/시간</h3> -->
+    <!-- Section 2-5: 예약 플로팅 박스 -->
+    <div class="detail-reservation-box">
+        <h3><span>${detailData.price}</span> 원/시간</h3>
+        <div class="reservation-container">
+          <div class="reservation-row">
+            <div class="reservation-item-1">
+              <p class="reservation-label">언제부터</p>
+              <p class="reservation-date">12.06 일</p>
+            </div>
+            <div class="reservation-item-2">
+              <p class="reservation-label">언제까지</p>
+              <p class="reservation-date">12.06 일</p>
+            </div>
+          </div>
+          <div class="reservation-row no-border"> <!-- 'no-border' 클래스를 추가 -->
+            <select class="time-select">
+              <option value="" disabled selected>시간을 입력해주세요</option>
+              <option value="1">1시간</option>
+              <option value="2">2시간</option>
+              <option value="3">3시간</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="submit-button">대관 신청하기</button>
+      </div>
+      
+  </section>
+  
+  
   <!-- section3 -->
 
   <!-- section4 -->
@@ -75,7 +186,6 @@
     </div>
 
   </footer>  
-
-
+  <script src="../../assets/js/detailPage.js" defer></script>
 </body>
 </html>

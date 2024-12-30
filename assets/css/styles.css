@@ -229,7 +229,7 @@
 .section1-2 {
   position: absolute;
   display: flex;
-  top: 300px;
+  top: 320px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -297,7 +297,7 @@
 }
 
 .section1-3 {
-  margin-top: 100px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
 }
@@ -322,6 +322,7 @@
 
 .section2 {
   padding: 70px;
+  padding-top: 30px;
 }
 .section2 .content-grid {
   display: grid;
