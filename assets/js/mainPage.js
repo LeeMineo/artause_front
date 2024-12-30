@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardHTML = `
         <div class="card" data-detail-url="${item.detailPage}">
             <div class="card-image">
-                <img src="${item.image}" alt="${item.title}">
+                <img src="${item.images[0]}" alt="${item.title}"> <!-- 첫 번째 이미지를 표시 -->
             </div>
             <div class="card-content">
                 <div class="card-tags">

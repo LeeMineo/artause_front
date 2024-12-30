@@ -46,7 +46,7 @@
 .section1-2 {
     position: absolute;
     display: flex;
-    top: 300px; // 섹션1-1에 반 정도 겹치게 설정
+    top: 320px; // 섹션1-1에 반 정도 겹치게 설정
     left: 50%;
     transform: translateX(-50%); // 가로 중앙 정렬
     z-index: 10;
@@ -126,7 +126,7 @@
   
   // Section1-3: 카테고리 아이콘
   .section1-3 {
-    margin-top: 100px; // 검색 바와의 간격 조정
+    margin-top: 70px; // 검색 바와의 간격 조정
     display: flex;
     justify-content: center;
   
@@ -153,10 +153,12 @@
     }
   }
   
-
+  
+//-----------------------------------------------------------------------------------------//
 // Section2
 .section2 {
     padding: 70px;
+    padding-top: 30px;
   
     .content-grid {
       display: grid;

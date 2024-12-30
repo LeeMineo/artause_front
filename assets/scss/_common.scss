@@ -5,7 +5,6 @@
     align-items: center;
     padding: 20px 80px;
     background-color: #fff;
-    //border-bottom: 1px solid #ddd;
   
     .logo {
       font-size: 20px;
@@ -54,11 +53,13 @@
     }
   }
   
-  /* 검색 섹션 */
-  .search-section {
+/* 검색 섹션 */
+.search-section {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0 80px;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #F3F3F0;
   
     .search-bar {
       display: flex;
@@ -71,7 +72,9 @@
         background-color: #f3f3f3;
         border-radius: 8px;
         padding: 9px 15px;
-        flex: 1;
+        flex: 1; /* 화면 크기에 따라 동적으로 크기 조절 */
+        min-width: 100px; /* 최소 너비 설정 */
+        max-width: 100%; /* 최대 너비 제한 */
   
         img {
           width: 17px;
@@ -95,7 +98,24 @@
     }
   }
   
+  /* 반응형 디자인 추가 */
+  @media screen and (max-width: 768px) {
+    .search-section {
+      padding: 0 20px; /* 좁은 화면에서는 padding 줄임 */
+    }
   
+    .search-bar {
+      flex-direction: column; /* 수직 정렬로 변경 */
+      gap: 10px;
+    }
+  
+    .search-option {
+      width: 80%; /* 화면 너비에 맞게 조정 */
+    }
+  }
+  
+  
+//-----------------------------------------------------------------------------------------// 
 //푸터
 .footer {
     padding: 40px 80px;
@@ -152,6 +172,7 @@
     }
   }
   
+//-----------------------------------------------------------------------------------------//
 //커밍순
 .coming-soon-container {
     display: flex;
@@ -200,6 +221,7 @@
   }
   
 
+//-----------------------------------------------------------------------------------------//
   //플로팅버튼
 
   .floating-button {
