@@ -1,28 +1,35 @@
 // 상단 텝
 function openTab(event, tabName) {
-    
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach((content) => (content.style.display = 'none'));
-  
-    const tabLinks = document.querySelectorAll('.tab-link');
-    tabLinks.forEach((link) => link.classList.remove('active'));
-  
-    document.getElementById(tabName).style.display = 'block';
-    if (event) {
-      event.currentTarget.classList.add('active');
-    }
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach((content) => (content.style.display = 'none'));
+
+  const tabLinks = document.querySelectorAll('.tab-link');
+  tabLinks.forEach((link) => link.classList.remove('active'));
+
+  document.getElementById(tabName).style.display = 'block';
+  if (event) {
+    event.currentTarget.classList.add('active');
+  } else {
+    // URL에서 직접 설정한 경우 탭 링크도 활성화
+    const activeLink = document.querySelector(`.tab-link[onclick*="${tabName}"]`);
+    if (activeLink) activeLink.classList.add('active');
   }
-  
-  //처음 화면은 무조건 예약내역 화면이 보이도록
-  window.addEventListener('DOMContentLoaded', () => {
-    const defaultTab = document.querySelector('.tab-link');
-    const defaultContent = document.getElementById('예약내역');
-  
-    if (defaultTab && defaultContent) {
-      defaultTab.classList.add('active'); 
-      defaultContent.style.display = 'block'; 
-    }
-  });
+}
+
+// DOMContentLoaded 이벤트에서 URL 쿼리 파라미터 확인 및 기본 탭 설정
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const tabFromUrl = params.get('tab'); // URL 쿼리 파라미터에서 'tab' 값 가져오기
+  const defaultTabName = tabFromUrl || '예약내역'; // 'tab' 값이 없으면 기본값 설정
+
+  const defaultContent = document.getElementById(defaultTabName);
+  if (defaultContent) {
+    openTab(null, defaultTabName); // 기본 탭 열기
+  } else {
+    console.error(`탭 이름 "${defaultTabName}"에 해당하는 컨텐츠를 찾을 수 없습니다.`);
+  }
+});
+
 
 //공연 정보-기획의도 및 작품 줄거리 글자수 세기
   document.addEventListener("DOMContentLoaded", () => {
