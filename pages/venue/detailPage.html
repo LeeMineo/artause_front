@@ -8,12 +8,14 @@
 </head>
 <body>
   <!-- Header2 Section -->
-  <header class="header">
+<header class="header">
     <div class="logo">
-        <a href="/pages/mainPage.html">
-          <img src="/assets/images/logo.svg" alt="로고">
-        </a>
+      <a href="/pages/mainPage.html">
+        <img src="/assets/images/logo.svg" alt="로고">
+      </a>
     </div>
+  
+    <!-- 데스크톱 버전에서 보이는 메뉴(기존 코드) -->
     <nav class="nav-menu">
       <ul>
         <li><a href="/pages/mainPage.html">홈</a></li>
@@ -22,10 +24,34 @@
         <li><a href="/pages/hostcenterPage.html">호스트센터</a></li>
       </ul>
     </nav>
+  
+    <!-- 로그인 버튼 -->
     <div class="login">
-        <a href="#" id="loginBtn">로그인</a>
+      <a href="#" id="loginBtn">로그인</a>
     </div>
+  
+    <!-- 모바일에서는 햄버거 아이콘으로 대체 -->
+    <button class="hamburger" id="hamburgerBtn">
+      <!-- 햄버거 아이콘은 자유롭게 사용 가능 (SVG, FontAwesome 등) -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </header>
+  
+  <!-- 모바일 메뉴(모달/오버레이) -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="close-btn" id="mobileMenuCloseBtn">×</button>
+      <ul>
+        <li><a href="/pages/mainPage.html">홈</a></li>
+        <li><a href="/pages/myPage.html">마이페이지</a></li>
+        <li><a href="/pages/myPage.html?tab=프로젝트등록">프로젝트 등록</a></li>
+        <li><a href="/pages/hostcenterPage.html">호스트센터</a></li>
+        <li><a href="#" id="mobileloginBtn">로그인</a></li>
+      </ul>
+    </div>
+  </div>
   
   <!-- 모달 -->
 <div id="loginModal" class="modal">
@@ -78,7 +104,7 @@
     </div>
   </div>
   
-  <!-- section1 -->
+  <!-- section1 이미지-->
 <!-- Section 1: Images -->
 <section class="detail-section1">
     <div class="main-image-container">
@@ -93,7 +119,7 @@
   </section>
   
   
-<!-- Section 2 -->
+<!-- Section 2 설명들 -->
 <section class="detail-section2">
     <div class="detail-content">
       <!-- Section 2-1: 기본정보 -->
@@ -166,15 +192,84 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="submit-button">대관 신청하기</button>
+        <button type="button" class="submit-button" id="reservationButton">대관 신청하기</button>         
       </div>
       
   </section>
   
   
-  <!-- section3 -->
+  <!-- section3 위치 -->
+   <!-- 자바스크립트 연결 X -->
+   <section class="detail-section3">
+    <div class="detail-section3-container">
+      <div class="detail-section3-left">
+        <h4>위치</h4>
+        <div class="detail-map-container">
+          <div class="detail-map-placeholder">지도</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- section4 -->
+  <!-- section4 후기 -->
+   <!-- 자바스크립트 연결 X -->
+   <section class="detail-section4">
+    <div class="detail-section4-container">
+      <div class="detail-section4-left">
+        <h4>후기</h4>
+        <div class="detail-review-summary">
+          <span class="detail-rating-score">★ 4.8</span>
+          <span class="detail-review-count">(122)</span>
+        </div>
+      </div>
+      <div class="detail-section4-right">
+        <!-- 반복되는 후기 아이템 -->
+        <div class="detail-review-item">
+          <div class="detail-review-profile">
+            <div class="detail-profile-placeholder"></div>
+            <div class="detail-review-details">
+              <span class="detail-reviewer-name">닉네임 |</span>
+              <span class="detail-review-stars">★★★★★</span>
+              <p>아야아야 | 후기다 후기 후기 후기 | | | |</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-review-item">
+          <div class="detail-review-profile">
+            <div class="detail-profile-placeholder"></div>
+            <div class="detail-review-details">
+              <span class="detail-reviewer-name">닉네임 |</span>
+              <span class="detail-review-stars">★★★★★</span>
+              <p>아야아야 | 후기다 후기 후기 후기 | | | |</p>
+            </div>
+          </div>
+        </div>
+        <!-- 후기 아이템 끝 -->
+         <!-- 반복되는 후기 아이템 -->
+        <div class="detail-review-item">
+            <div class="detail-review-profile">
+              <div class="detail-profile-placeholder"></div>
+              <div class="detail-review-details">
+                <span class="detail-reviewer-name">닉네임 |</span>
+                <span class="detail-review-stars">★★★★★</span>
+                <p>아야아야 | 후기다 후기 후기 후기 | | | |</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-review-item">
+            <div class="detail-review-profile">
+              <div class="detail-profile-placeholder"></div>
+              <div class="detail-review-details">
+                <span class="detail-reviewer-name">닉네임 |</span>
+                <span class="detail-review-stars">★★★★★</span>
+                <p>아야아야 | 후기다 후기 후기 후기 | | | |</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
 
 
   <!-- footer -->
@@ -217,5 +312,6 @@
 
   </footer>  
   <script src="../../assets/js/detailPage.js" defer></script>
+  <script src="../assets/js/common.js" defer></script>
 </body>
 </html>

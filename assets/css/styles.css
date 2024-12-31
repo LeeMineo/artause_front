@@ -74,6 +74,105 @@
   color: #EF283D; /* 호버 색상 */
 }
 
+/* 햄버거 메뉴 스타일 */
+.hamburger {
+  display: none; /* 기본적으로 숨김 */
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* 모바일 메뉴 오버레이 */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  display: none; /* 기본적으로 숨김 */
+  opacity: 0;
+}
+
+/* 모바일 메뉴 내용 */
+.mobile-menu-content {
+  position: fixed;
+  top: 0;
+  left: -40%; /* 화면 밖으로 숨김 */
+  width: 100%; /* 화면의 절반만 차지 */
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10vw;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* 슬라이드와 투명도 애니메이션 */
+  transform: translateX(-50%); /* 초기 위치를 화면 밖으로 설정 */
+}
+
+.mobile-menu-content ul {
+  list-style: none;
+  padding: 5vw;
+  margin: 0;
+  text-align: start;
+}
+
+.mobile-menu-content li {
+  margin: 3vw 15vw;
+}
+
+.mobile-menu-content a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.mobile-menu-content .close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+/* 모바일 메뉴 활성화 상태 */
+.mobile-menu-overlay.active {
+  display: block;
+  opacity: 1; /* 오버레이 활성화 */
+}
+
+.mobile-menu-content.active {
+  transform: translateX(0); /* 화면 안으로 슬라이드 */
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none; /* 데스크톱 메뉴 숨기기 */
+  }
+  .hamburger {
+    display: flex; /* 햄버거 메뉴 보이기 */
+  }
+  .login {
+    display: none; /* 로그인 버튼 숨기기 (필요에 따라 조정) */
+  }
+}
 /* 검색 섹션 */
 .search-section {
   margin-top: 10px;
@@ -114,17 +213,23 @@
   color: #aaa;
 }
 
-/* 반응형 디자인 추가 */
+/* 미디어 쿼리: 화면이 작아질 때 (768px 이하) */
 @media screen and (max-width: 768px) {
   .search-section {
-    padding: 0 20px; /* 좁은 화면에서는 padding 줄임 */
+    padding: 10px; /* 좁은 화면에서 padding 줄임 */
+    text-align: center; /* 검색 섹션 전체 중앙 정렬 */
   }
   .search-bar {
-    flex-direction: column; /* 수직 정렬로 변경 */
-    gap: 10px;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    gap: 15px;
   }
   .search-option {
     width: 80%; /* 화면 너비에 맞게 조정 */
+    justify-content: center; /* 아이템 중앙 정렬 */
+  }
+  .search-option img {
+    margin-right: 5px; /* 아이콘과 텍스트 간 간격 줄임 */
   }
 }
 /* 모달 백그라운드 */
@@ -304,6 +409,21 @@
   margin: 5px 0;
 }
 
+/* 미디어 쿼리: 화면이 작아질 때 세로로 나열 */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 좌측 정렬 */
+  }
+  .footer .footer-links {
+    flex-direction: column; /* 세로 정렬 */
+    gap: 20px; /* 각 컬럼 사이 간격 */
+  }
+  .footer .footer-info {
+    margin-right: 0; /* 마진 제거 */
+    margin-top: 20px; /* 상단 간격 추가 */
+  }
+}
 .coming-soon-container {
   display: flex;
   justify-content: center;
@@ -364,33 +484,33 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.section1-1 {
+.main-section1-1 {
   position: relative;
 }
-.section1-1 .banner {
+.main-section1-1 .main-banner {
   width: 100%;
   height: 300px;
   background-color: #ddd;
   position: relative;
   overflow: hidden;
 }
-.section1-1 .banner .carousel {
+.main-section1-1 .main-banner .main-carousel {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.section1-1 .banner .carousel .carousel-images {
+.main-section1-1 .main-banner .main-carousel .main-carousel-images {
   display: flex;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
-.section1-1 .banner .carousel .carousel-images img {
+.main-section1-1 .main-banner .main-carousel .main-carousel-images img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   flex-shrink: 0; /* 이미지 크기 고정 */
 }
-.section1-1 .banner .carousel .carousel-indicator {
+.main-section1-1 .main-banner .main-carousel .main-carousel-indicator {
   position: absolute;
   bottom: 10px;
   right: 20px;
@@ -401,7 +521,7 @@
   font-size: 14px;
 }
 
-.section1-2 {
+.main-section1-2 {
   position: absolute;
   display: flex;
   top: 330px;
@@ -409,8 +529,9 @@
   transform: translateX(-50%);
   z-index: 10;
   gap: 20px;
+  /* 반응형 스타일 */
 }
-.section1-2 .search-container {
+.main-section1-2 .main-search-container {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -418,23 +539,23 @@
   display: flex;
   align-items: center;
 }
-.section1-2 .search-container .search-bar {
+.main-section1-2 .main-search-container .main-search-bar {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.section1-2 .search-container .search-bar .search-option {
+.main-section1-2 .main-search-container .main-search-bar .main-search-option {
   text-align: center;
 }
-.section1-2 .search-container .search-bar .search-option span {
+.main-section1-2 .main-search-container .main-search-bar .main-search-option span {
   font-size: 14px;
   margin-bottom: 5px;
   display: block;
-  background: linear-gradient(180deg, #FF7070 0%, #FF9999 100%);
+  background: linear-gradient(180deg, #ff7070 0%, #ff9999 100%);
   -webkit-background-clip: text; /* 텍스트에만 배경 그라데이션 적용 */
   -webkit-text-fill-color: transparent; /* 텍스트 내부를 투명하게 설정 */
 }
-.section1-2 .search-container .search-bar .search-option .input {
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input {
   width: 120px;
   height: 30px;
   background-color: #f3f3f3;
@@ -444,12 +565,12 @@
   align-items: center;
   padding-left: 10px; /* 아이콘과 왼쪽 경계 간격 */
 }
-.section1-2 .search-container .search-bar .search-option .input img {
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input img {
   width: 16px;
   height: 16px;
 }
-.section1-2 .search-btn {
-  background: linear-gradient(180deg, #FF7070 0%, #FF9999 100%); /* 그라데이션 색상 추가 */
+.main-section1-2 .main-search-btn {
+  background: linear-gradient(180deg, #ff7070 0%, #ff9999 100%); /* 그라데이션 색상 추가 */
   border: none;
   border-radius: 20%; /* 동그란 모양 */
   width: 80px; /* 버튼 크기 */
@@ -460,71 +581,118 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
-.section1-2 .search-btn img {
+.main-section1-2 .main-search-btn img {
   width: 40px; /* 아이콘 크기 */
   height: 40px;
 }
-.section1-2 .search-btn:hover {
+.main-section1-2 .main-search-btn:hover {
   opacity: 0.9; /* 호버 시 약간 투명하게 */
 }
-.section1-2 .search-btn:active {
+.main-section1-2 .main-search-btn:active {
   transform: scale(0.95); /* 클릭 시 버튼 살짝 눌림 효과 */
 }
+@media screen and (max-width: 768px) {
+  .main-section1-2 {
+    flex-direction: column; /* 세로 정렬 */
+    top: auto; /* top 속성 초기화 */
+    left: auto; /* left 속성 초기화 */
+    transform: none; /* 중앙 정렬 제거 */
+    position: static; /* 흐름에 맞게 배치 */
+  }
+  .main-section1-2 .main-search-container {
+    width: 90%; /* 화면에 꽉 차도록 */
+    justify-content: center;
+  }
+  .main-section1-2 .main-search-bar {
+    flex-direction: column; /* 검색 옵션을 세로로 정렬 */
+    gap: 10px; /* 옵션 간 간격 조정 */
+  }
+  .main-section1-2 .main-search-btn {
+    align-self: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 위로 약간의 간격 */
+  }
+}
 
-.section1-3 {
+.main-section1-3 {
   margin-top: 70px;
   display: flex;
   justify-content: center;
+  /* 반응형 스타일 */
+  /* 반응형 스타일 */
 }
-.section1-3 .category-icons {
+.main-section1-3 .main-category-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
 }
-.section1-3 .category {
+.main-section1-3 .main-category {
   text-align: center;
   flex: 1;
 }
-.section1-3 .category .icon {
+.main-section1-3 .main-category .main-icon {
   width: 70px; /* 아이콘 크기 조정 */
   height: 70px;
   margin-bottom: 10px; /* 아이콘과 텍스트 간격 */
 }
-.section1-3 .category p {
+.main-section1-3 .main-category p {
   font-size: 14px;
   color: #333;
 }
+@media screen and (max-width: 768px) {
+  .main-section1-3 .main-category-icons {
+    gap: 15px; /* 간격 조정 */
+  }
+  .main-section1-3 .main-category .main-icon {
+    width: 15vw; /* 작은 화면에서 아이콘 크기 줄이기 */
+    height: 15vw;
+  }
+  .main-section1-3 .main-category p {
+    font-size: 3vw; /* 텍스트 크기 줄이기 */
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-section1-3 .main-category-icons {
+    gap: 15px; /* 더 작은 화면에서 간격 조정 */
+  }
+  .main-section1-3 .main-category .main-icon {
+    width: 15vw; /* 더 작은 아이콘 크기 */
+    height: 15vw;
+  }
+  .main-section1-3 .main-category p {
+    font-size: 3vw; /* 텍스트 크기 더 줄이기 */
+  }
+}
 
-.section2 {
+.main-section2 {
   padding: 70px;
   padding-top: 30px;
 }
-.section2 .content-grid {
+.main-section2 .main-content-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 @media (max-width: 1024px) {
-  .section2 .content-grid {
+  .main-section2 .main-content-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .section2 .content-grid {
+  .main-section2 .main-content-grid {
     grid-template-columns: 1fr;
   }
 }
-.section2 .card {
+.main-section2 .main-card {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
 }
-.section2 .card:hover {
+.main-section2 .main-card:hover {
   transform: scale(1.02);
 }
-.section2 .card .card-image {
+.main-section2 .main-card .main-card-image {
   width: 100%;
   height: 230px;
   border-radius: 30px;
@@ -533,82 +701,82 @@
   justify-content: center;
   align-items: center;
 }
-.section2 .card .card-image img {
+.main-section2 .main-card .main-card-image img {
   width: 100%;
   height: 100%;
   border-radius: 30px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
 }
-.section2 .card .card-content {
+.main-section2 .main-card .main-card-content {
   padding-top: 15px;
 }
-.section2 .card .card-content .card-tags {
+.main-section2 .main-card .main-card-content .main-card-tags {
   margin-bottom: 10px;
   display: flex;
   gap: 8px;
 }
-.section2 .card .card-content .card-tags .tag {
-  background: #EDEDED;
-  color: #0C0C0C;
+.main-section2 .main-card .main-card-content .main-card-tags .main-tag {
+  background: #ededed;
+  color: #0c0c0c;
   font-size: 12px;
   padding: 5px 8px;
   border-radius: 8px;
   font-weight: 500;
 }
-.section2 .card .card-content .card-info {
+.main-section2 .main-card .main-card-content .main-card-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section2 .card .card-content .card-info .card-info-right {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right {
   align-items: flex-end;
 }
-.section2 .card .card-content .card-info .card-info-left {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left {
   align-items: flex-start;
 }
-.section2 .card .card-content .card-info .card-info-right,
-.section2 .card .card-content .card-info .card-info-left {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.section2 .card .card-content .card-info .card-info-right .card-title,
-.section2 .card .card-content .card-info .card-info-left .card-title {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-card-title,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-card-title {
   font-size: 14px;
   font-weight: bold;
   color: #333;
 }
-.section2 .card .card-content .card-info .card-info-right .card-location,
-.section2 .card .card-content .card-info .card-info-right .rating,
-.section2 .card .card-content .card-info .card-info-left .card-location,
-.section2 .card .card-content .card-info .card-info-left .rating {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-card-location,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-rating,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-card-location,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-rating {
   display: flex;
   align-items: center;
   font-size: 14px;
   gap: 5px;
 }
-.section2 .card .card-content .card-info .card-info-right .card-location img,
-.section2 .card .card-content .card-info .card-info-right .rating img,
-.section2 .card .card-content .card-info .card-info-left .card-location img,
-.section2 .card .card-content .card-info .card-info-left .rating img {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-card-location img,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-rating img,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-card-location img,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-rating img {
   width: 14px;
   height: 14px;
 }
-.section2 .card .card-content .card-info .card-info-right .card-location .review-count,
-.section2 .card .card-content .card-info .card-info-right .rating .review-count,
-.section2 .card .card-content .card-info .card-info-left .card-location .review-count,
-.section2 .card .card-content .card-info .card-info-left .rating .review-count {
-  color: #5E5E5E;
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-card-location .main-review-count,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-rating .main-review-count,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-card-location .main-review-count,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-rating .main-review-count {
+  color: #5e5e5e;
 }
-.section2 .card .card-content .card-info .card-info-right .price,
-.section2 .card .card-content .card-info .card-info-left .price {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-price,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-price {
   color: #e74c3c;
   font-size: 14px;
   font-weight: bold;
 }
-.section2 .card .card-content .card-info .card-info-right .price-unit,
-.section2 .card .card-content .card-info .card-info-left .price-unit {
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-right .main-price-unit,
+.main-section2 .main-card .main-card-content .main-card-info .main-card-info-left .main-price-unit {
   color: #242526;
   font-weight: normal;
 }
@@ -673,6 +841,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px 70px;
+  padding-bottom: 0;
   gap: 20px; /* 콘텐츠와 예약 박스 간격 */
   /* 왼쪽 묶음 콘텐츠 */
 }
@@ -908,6 +1077,188 @@
   background-color: #FFAAAA;
 }
 
+/* 미디어 쿼리: 화면이 작아질 때 */
+@media screen and (max-width: 768px) {
+  .detail-section1 {
+    padding: 5vw;
+  }
+  .detail-section2 {
+    flex-direction: column; /* 전체 섹션을 세로로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 5vw;
+  }
+  .detail-content {
+    width: 100%; /* 콘텐츠를 가득 채우기 */
+    margin-bottom: 20px; /* 플로팅 박스와 간격 */
+  }
+  .detail-reservation-box {
+    width: 80vw; /* 플로팅 박스 가로 크기를 콘텐츠에 맞춤 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 5vw; /* 내부 간격 줄임 */
+    box-shadow: none; /* 그림자 제거 */
+    border: 1px solid #E5E5E5; /* 구분선 추가 */
+  }
+}
+/* Section 3: 위치 */
+.detail-section3 {
+  display: flex;
+  gap: 15px;
+  padding: 0px 70px;
+}
+
+.detail-section3-left h4 {
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.detail-section3-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-section3-left {
+  width: 100%;
+  text-align: center;
+}
+
+.detail-map-container {
+  width: 100%;
+  height: 300px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-map-placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Section 4: 후기 */
+.detail-section4 {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  padding: 20px 60px;
+  gap: 20px; /* 섹션 간 간격 */
+}
+
+.detail-section4-container {
+  width: 60%;
+  margin: 0;
+  border-top: 1px solid #D8D8D8;
+}
+
+.detail-section4-left h4 {
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.detail-section4-right {
+  display: flex;
+  flex-wrap: wrap; /* 줄바꿈 가능 */
+  gap: 20px;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.detail-review-item {
+  flex: 0 0 calc(50% - 20px); /* 2개씩 배치 */
+  max-width: calc(50% - 20px); /* 최대 크기 제한 */
+  padding-top: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.detail-review-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.detail-profile-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.detail-review-details {
+  flex: 1;
+}
+
+.detail-reviewer-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.detail-review-stars {
+  font-size: 0.8rem;
+  color: #f5a623;
+}
+
+.detail-review-details p {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+@media screen and (max-width: 768px) {
+  /* Section 3: 위치 */
+  .detail-section3 {
+    flex-direction: column; /* 세로 정렬 */
+    gap: 20px; /* 간격 추가 */
+    padding: 0 20px; /* 좌우 여백 줄임 */
+  }
+  .detail-section3-left {
+    width: 100%; /* 가로 너비를 100%로 설정 */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
+  .detail-map-container {
+    height: 200px; /* 지도 높이 축소 */
+  }
+  /* Section 4: 후기 */
+  .detail-section4 {
+    padding: 20px; /* 패딩 줄임 */
+  }
+  .detail-section4-container {
+    width: 100%; /* 전체 너비 */
+    gap: 20px; /* 간격 유지 */
+  }
+  .detail-section4-left h4 {
+    font-size: 14px; /* 글자 크기 축소 */
+    margin-bottom: 10px;
+  }
+  .detail-section4-right {
+    flex-direction: column; /* 세로 정렬 */
+    gap: 15px; /* 간격 줄임 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+  }
+  .detail-review-item {
+    flex: 1; /* 한 줄에 하나씩 배치 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    padding: 15px; /* 내부 여백 조정 */
+    border: 1px solid #e5e5e5; /* 테두리 유지 */
+    margin-top: 5px;
+  }
+  .detail-review-profile {
+    gap: 8px; /* 프로필 간 간격 축소 */
+  }
+  .detail-profile-placeholder {
+    width: 40px; /* 프로필 크기 축소 */
+    height: 40px;
+  }
+  .detail-review-details p {
+    font-size: 0.75rem; /* 글자 크기 축소 */
+  }
+}
 /* Section 2 */
 .section2 {
   width: 100%;
@@ -1056,6 +1407,37 @@
   margin-top: 10px;
 }
 
+/* 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+  .section2-container {
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    gap: 20px; /* 섹션 간 간격 */
+    width: 100%; /* 전체 너비 */
+    padding: 0 10px; /* 좌우 여백 추가 */
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+  }
+  .section2-left,
+  .section2-right {
+    width: 100%; /* 각 섹션 너비를 100%로 */
+  }
+  .section2-left img {
+    width: 100%; /* 이미지가 부모 요소를 벗어나지 않도록 */
+    height: auto; /* 높이는 자동으로 */
+  }
+  .section2-right {
+    padding: 20px; /* 내부 여백 조정 */
+    height: auto; /* 고정 높이 제거 */
+    box-shadow: none; /* 그림자 제거 (선택 사항) */
+  }
+  .section2-right .price {
+    text-align: center; /* 가격 텍스트 가운데 정렬 */
+    margin-top: 10px; /* 위쪽 간격 추가 */
+  }
+  .section2-right button {
+    margin-top: 15px; /* 버튼 위쪽 간격 추가 */
+  }
+}
 /* Section 3 */
 .section3 {
   width: 100%;
@@ -1260,6 +1642,61 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .section3-container,
+  .section4-container {
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    gap: 20px; /* 섹션 간 간격 */
+    width: 100%; /* 전체 너비 */
+    padding: 0 10px; /* 좌우 여백 */
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+  }
+  .section3-left,
+  .section3-right,
+  .section4-left,
+  .section4-right {
+    width: 100%; /* 각각의 섹션 너비를 100%로 */
+  }
+  .section3-container h3,
+  .section4-left h3 {
+    text-align: center; /* 제목을 가운데 정렬 */
+  }
+  .section3-container .input-group {
+    width: 100%; /* 입력 그룹 너비를 화면에 맞춤 */
+    flex-direction: column; /* 입력 필드를 세로 정렬 */
+  }
+  .section3-container label {
+    margin-bottom: 5px; /* 레이블 아래 간격 추가 */
+    text-align: left; /* 레이블 왼쪽 정렬 */
+    width: 100%; /* 레이블 너비 100% */
+  }
+  .section3-container input,
+  .section3-container textarea,
+  #purpose {
+    width: 100%; /* 입력 필드와 텍스트박스 너비를 100%로 */
+  }
+  .section4-left-line {
+    margin: 20px 0; /* 구분선 여백 조정 */
+  }
+  .host-profile {
+    justify-content: center; /* 호스트 프로필을 가운데 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+  }
+  .host-details p {
+    text-align: center; /* 호스트 정보 가운데 정렬 */
+    margin: 10px 0; /* 간격 조정 */
+  }
+  .section4-left-detail ul li {
+    flex-direction: column; /* 리스트 항목을 세로 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    margin-bottom: 15px; /* 리스트 항목 간 간격 조정 */
+  }
+  .custom-circle-list li {
+    text-align: center; /* 동그라미 리스트 가운데 정렬 */
+    padding-left: 0; /* 패딩 제거 */
+  }
+}
 .tabs {
   display: flex;
   width: 100%;

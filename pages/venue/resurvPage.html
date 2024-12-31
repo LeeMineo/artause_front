@@ -7,13 +7,15 @@
   <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header2 Section -->
   <header class="header">
     <div class="logo">
-        <a href="/pages/mainPage.html">
-          <img src="/assets/images/logo.svg" alt="로고">
-        </a>
+      <a href="/pages/mainPage.html">
+        <img src="/assets/images/logo.svg" alt="로고">
+      </a>
     </div>
+  
+    <!-- 데스크톱 버전에서 보이는 메뉴(기존 코드) -->
     <nav class="nav-menu">
       <ul>
         <li><a href="/pages/mainPage.html">홈</a></li>
@@ -22,11 +24,34 @@
         <li><a href="/pages/hostcenterPage.html">호스트센터</a></li>
       </ul>
     </nav>
+  
+    <!-- 로그인 버튼 -->
     <div class="login">
-        <a href="#" id="loginBtn">로그인</a>
+      <a href="#" id="loginBtn">로그인</a>
     </div>
+  
+    <!-- 모바일에서는 햄버거 아이콘으로 대체 -->
+    <button class="hamburger" id="hamburgerBtn">
+      <!-- 햄버거 아이콘은 자유롭게 사용 가능 (SVG, FontAwesome 등) -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </header>
-
+  
+  <!-- 모바일 메뉴(모달/오버레이) -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="close-btn" id="mobileMenuCloseBtn">×</button>
+      <ul>
+        <li><a href="/pages/mainPage.html">홈</a></li>
+        <li><a href="/pages/myPage.html">마이페이지</a></li>
+        <li><a href="/pages/myPage.html?tab=프로젝트등록">프로젝트 등록</a></li>
+        <li><a href="/pages/hostcenterPage.html">호스트센터</a></li>
+        <li><a href="#" id="mobileloginBtn">로그인</a></li>
+      </ul>
+    </div>
+  </div>
   <!-- 모달 -->
 <div id="loginModal" class="modal">
     <div class="modal-content">
@@ -270,6 +295,7 @@
   </footer>  
 
   <script src="../../assets/js/resurvPage.js" defer></script>
+  <script src="../assets/js/common.js" defer></script>
 
 </body>
 </html>

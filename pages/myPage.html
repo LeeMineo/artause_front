@@ -9,13 +9,15 @@
 
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
+<!-- Header Section -->
+<header class="header">
     <div class="logo">
-        <a href="mainPage.html">
-          <img src="/assets/images/logo.svg" alt="로고">
-        </a>
+      <a href="mainPage.html">
+        <img src="/assets/images/logo.svg" alt="로고">
+      </a>
     </div>
+  
+    <!-- 데스크톱 버전에서 보이는 메뉴(기존 코드) -->
     <nav class="nav-menu">
       <ul>
         <li><a href="mainPage.html">홈</a></li>
@@ -24,16 +26,41 @@
         <li><a href="hostcenterPage.html">호스트센터</a></li>
       </ul>
     </nav>
+  
+    <!-- 로그인 버튼 -->
     <div class="login">
-        <a href="#" id="loginBtn">로그인</a>
+      <a href="#" id="loginBtn">로그인</a>
     </div>
+  
+    <!-- 모바일에서는 햄버거 아이콘으로 대체 -->
+    <button class="hamburger" id="hamburgerBtn">
+      <!-- 햄버거 아이콘은 자유롭게 사용 가능 (SVG, FontAwesome 등) -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </header>
-
-  <div class="tabs">
+  
+    <!-- 페이지 내에서 페이지 이동 -->
+    <div class="tabs">
     <div class="tabs-container">
-      <button class="tab-link" onclick="openTab(event, '예약내역')">예약내역</button>
-      <button class="tab-link" onclick="openTab(event, '회원정보')">회원정보</button>
-      <button class="tab-link" onclick="openTab(event, '프로젝트등록')">프로젝트 등록</button>
+        <button class="tab-link" onclick="openTab(event, '예약내역')">예약내역</button>
+        <button class="tab-link" onclick="openTab(event, '회원정보')">회원정보</button>
+        <button class="tab-link" onclick="openTab(event, '프로젝트등록')">프로젝트 등록</button>
+    </div>
+    </div>
+
+  <!-- 모바일 메뉴(모달/오버레이) -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="close-btn" id="mobileMenuCloseBtn">×</button>
+      <ul>
+        <li><a href="mainPage.html">홈</a></li>
+        <li><a href="myPage.html">마이페이지</a></li>
+        <li><a href="myPage.html?tab=프로젝트등록">프로젝트 등록</a></li>
+        <li><a href="hostcenterPage.html">호스트센터</a></li>
+        <li><a href="#" id="mobileloginBtn">로그인</a></li>
+      </ul>
     </div>
   </div>
 
@@ -66,8 +93,9 @@
     </div>
   </div>
   
-
-  <!-- 이건 그냥 예약 페이지 복붙해놓은 거에요... -->
+  
+  
+<!-- ----------------------예약정보 페이지 ----------------------------------- -->
   <div id="예약내역" class="tab-content">
       <!-- section2 -->
     <div class="section2">
@@ -107,8 +135,6 @@
       </div>
 
     </div>
-
-
     <!-- section3 -->
     <div class="section3">
       <div class="section3-container">
@@ -230,11 +256,10 @@
       <div class="section4-right"></div>
     </div>
   </div>
-
-
-
-  </div>
+</div>
   
+
+<!-- ----------------------회원정보 페이지 ----------------------------------- -->
   <div id="회원정보" class="tab-content" style="display: block;">
     <div class="profile-container">
       <h2 class="profile-header">내 프로필</h2>
@@ -267,7 +292,7 @@
     </div>
   </div>
   
-
+<!-- ---------------------- 프로젝트 등록 페이지 ----------------------------------- -->
   <div id="프로젝트등록" class="tab-content" style="display:none;">
   
   <div class="form-container">
@@ -509,6 +534,7 @@
   </footer>  
 
   <script src="../assets/js/myPage.js" defer></script>
+  <script src="../assets/js/common.js" defer></script>
 
 </body>
 </html>

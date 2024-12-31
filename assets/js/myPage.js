@@ -110,29 +110,3 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   
 
-
-//모달
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loginBtn = document.getElementById("loginBtn");
-  const loginModal = document.getElementById("loginModal");
-  const closeModalBtn = document.getElementById("closeModalBtn");
-
-  // 모달 열기
-  loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    loginModal.style.display = "flex";
-  });
-
-  // 모달 닫기
-  closeModalBtn.addEventListener("click", () => {
-    loginModal.style.display = "none";
-  });
-
-  // 모달 바깥 클릭 시 닫기
-  window.addEventListener("click", (e) => {
-    if (e.target === loginModal) {
-      loginModal.style.display = "none";
-    }
-  });
-});
