@@ -547,7 +547,7 @@
 .main-section1-2 .main-search-container .main-search-bar .main-search-option {
   text-align: center;
 }
-.main-section1-2 .main-search-container .main-search-bar .main-search-option span {
+.main-section1-2 .main-search-container .main-search-bar .main-search-option label {
   font-size: 14px;
   margin-bottom: 5px;
   display: block;
@@ -564,10 +564,47 @@
   justify-content: flex-start; /* 왼쪽 정렬 */
   align-items: center;
   padding-left: 10px; /* 아이콘과 왼쪽 경계 간격 */
+  /* 아이콘 사이즈 */
+  /* 실제 입력 필드 스타일 */
+  /* 기본 달력 아이콘을 시각적으로만 투명 처리 (웹킷) */
+  /* 날짜 텍스트도 보이지 않게 하고 싶다면 */
 }
 .main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input img {
   width: 16px;
   height: 16px;
+  margin-right: 5px;
+}
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input {
+  /* 브라우저 기본 스타일 지우기 */
+  border: none;
+  outline: none;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none; /* 사파리 등 웹킷 브라우저 */
+  -moz-appearance: none; /* 파이어폭스 */
+  /* 원하는 너비(height)는 부모에서 30px 주었으니 line-height만 맞추면 됩니다. */
+  width: 80px; /* 입력칸 넓이 원하는대로 조절 */
+  height: 100%;
+  line-height: 30px;
+  font-size: 14px;
+  /* placeholder 스타일 조정 (선택 사항) */
+}
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input::placeholder {
+  color: #aaa;
+  font-size: 12px;
+}
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0; /* 아이콘을 투명하게 */
+  width: 100%; /* 아이콘 영역 넓힘 */
+  cursor: pointer; /* 커서: 포인터 */
+  pointer-events: auto; /* 클릭 가능하도록 */
+}
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input[type=date]::-webkit-datetime-edit,
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input[type=date]::-webkit-datetime-edit-text,
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input[type=date]::-webkit-datetime-edit-month-field,
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input[type=date]::-webkit-datetime-edit-day-field,
+.main-section1-2 .main-search-container .main-search-bar .main-search-option .main-input input[type=date]::-webkit-datetime-edit-year-field {
+  color: transparent;
 }
 .main-section1-2 .main-search-btn {
   background: linear-gradient(180deg, #ff7070 0%, #ff9999 100%); /* 그라데이션 색상 추가 */
